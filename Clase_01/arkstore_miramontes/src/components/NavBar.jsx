@@ -11,7 +11,7 @@ function NavBar() {
                 <div className="flex items-center md:order-2">
                     <button type="button" className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" type="button" data-dropdown-toggle="dropdown">
                         <span className="sr-only">Open user menu</span>
-                        <img className="w-8 h-8 rounded-full bg-white" src="https://cdn-icons.flaticon.com/png/512/560/premium/560338.png?token=exp=1645743562~hmac=9d63919cf808eee8b5eae328b48c8020" alt="user photo"/>
+                        <img className="w-8 h-8 rounded-full bg-white" src="./default_user.png" alt="user photo"/>
                     </button>
                     <div className="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown">
                         <div className="py-3 px-4">
