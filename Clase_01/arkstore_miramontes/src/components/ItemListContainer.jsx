@@ -1,12 +1,26 @@
-import React from 'react'
-import ItemCount from './ItemCount'
+import React, { useEffect, useState } from 'react'
+import { askData } from '../helper/AcessData'
+import { ItemList } from './ItemList'
 
+const ItemListContainer = () => {
+    const [products,setProducts]= useState([])
+    //const [loading,setLoading]=useState(false)
 
-const ItemListContainer = ({greeting}) => {
+    useEffect(() => {
+        askData()
+        .then((res) => {
+            setProducts(res);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+        .finally(() => {
+            console.log("Loaded 100%");
+        });
+    }, []);
     return (
         <>
-        <div className='text-3xl text-blue-900 font-bold mb-3'>{greeting}</div>
-        <ItemCount stock="5" initial="1"/>
+            <ItemList products={products}/>        
         </>
     )
 }
