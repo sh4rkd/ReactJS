@@ -1,27 +1,41 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { askData } from '../helper/AcessData'
 import { ItemList } from './ItemList'
 
 const ItemListContainer = () => {
     const [products,setProducts]= useState([])
-    //const [loading,setLoading]=useState(false)
+    const [loading,setLoading]=useState(false)
+
+    const {categoryId} = useParams()
 
     useEffect(() => {
+        setLoading(true)
+
         askData()
         .then((res) => {
-            setProducts(res);
+            if (!categoryId){
+                setProducts( res )
+            }else {
+                setProducts( res.filter((product) => product.category === categoryId) )
+            }
         })
         .catch((err) => {
             console.log(err);
         })
         .finally(() => {
-            console.log("Loaded 100%");
+            setLoading(false)
         });
-    }, []);
+    }, [categoryId]);
+
     return (
-        <>
-            <ItemList products={products}/>        
-        </>
+        <div className="h-screen">
+            {
+                loading
+                ? <h2 className="text-7xl font-semibold text-center pt-96">Loading...</h2>
+                    : <ItemList products={products}/>
+            } 
+        </div>
     )
 }
 
