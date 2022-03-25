@@ -10,6 +10,7 @@ import {
 import ItemDetailContainer from './components/ItemDetailContainer';
 import About from './components/About';
 import Contact from './components/Contact';
+import Cart from './components/Cart';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Route path="/details/:itemId" element={ <ItemDetailContainer/> }/>
       <Route path="/about" element={ <About/> }/>
       <Route path="/contact" element={ <Contact/> }/>
+      <Route path="/cart" element={ <Cart/> }/>
       <Route path="*" element={ <Navigate to="/"/> }/>
     </Routes>
 

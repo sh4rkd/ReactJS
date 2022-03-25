@@ -11,7 +11,6 @@ export const Item = ({id,itemName,level,atkPower,additionalDamage,characterClass
                         <img src={img} alt={itemName}/>
                     </div>
                     <div className="bg-yellow-300 flex flex-col justify-center items-center h-5/6 rounded-b-lg text-center">
-                        <ItemCount stock="5" initial="1"/>
                         <p className="text-black text-xl font-semibold">{itemName}</p>
                         <p className='text-sm'>level: {level}</p>
                         <p className='text-sm'>atk power: {atkPower}</p> 
