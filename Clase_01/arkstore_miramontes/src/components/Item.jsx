@@ -3,7 +3,7 @@ import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
 import { Button } from '../helper/Button'
 
-export const Item = ({id,itemName,level,atkPower,additionalDamage,characterClass,img}) => {
+export const Item = ({id,itemName,level,atkPower,additionalDamage,characterClass,img,price}) => {
     return (
         <div className='p-20'>
                 <div className="w-64 h-64 shadow-md rounded-lg">                    
@@ -14,7 +14,9 @@ export const Item = ({id,itemName,level,atkPower,additionalDamage,characterClass
                         <p className="text-black text-xl font-semibold">{itemName}</p>
                         <p className='text-sm'>level: {level}</p>
                         <p className='text-sm'>atk power: {atkPower}</p> 
-                        <p className='text-sm'>aditional damage: {additionalDamage}%</p>
+                        <p className='text-sm'>aditional damage: {additionalDamage}%</p> 
+                        <p className='text-sm'>class: {characterClass}</p> 
+                        <p className='text-sm'>price: ${price}</p>
                         <Link to={`/details/${id}`}><Button>Item stats</Button></Link>
                     </div>
                 </div>
