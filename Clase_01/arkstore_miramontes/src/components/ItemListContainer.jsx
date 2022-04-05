@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { askData } from '../helper/AcessData'
+import { db } from "../../src/utils/firebase"
+import { collection, getDocs, query, where } from "firebase/firestore"
 import { ItemList } from './ItemList'
 
 const ItemListContainer = () => {
@@ -12,17 +13,18 @@ const ItemListContainer = () => {
     useEffect(() => {
         setLoading(true)
 
-        askData()
-        .then((res) => {
-            if (!categoryId){
-                setProducts( res )
-            }else {
-                setProducts( res.filter((product) => product.category === categoryId) )
-            }
-        })
-        .catch((err) => {
-            console.log(err);
-        })
+        const itemsRef = collection(db, "items")
+        const q = categoryId ? query(itemsRef, where("category","==", categoryId)) : itemsRef
+
+        getDocs (q)
+            .then((resp) => {
+                setProducts(resp.docs.map((doc) => {
+                    return {
+                        id: doc.id,
+                        ...doc.data()
+                    }
+                }))
+            })
         .finally(() => {
             setLoading(false)
         });

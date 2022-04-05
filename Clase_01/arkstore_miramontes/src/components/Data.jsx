@@ -1,6 +1,5 @@
 export const stock = [
     {
-        id: 0,
         itemName: 'Mount Havoc',
         level: 1100,
         atkPower: 17958,
@@ -11,7 +10,6 @@ export const stock = [
         stock: 100
     },
     {
-        id: 1,
         itemName: 'Divided Screaming Hallucination Greatsword',
         level: 1390,
         atkPower: 19607,
@@ -22,7 +20,6 @@ export const stock = [
         stock: 100
     },
     {
-        id: 2,
         itemName: 'Whispering Hallucination Reverb Greatsword',
         level: 1390,
         atkPower: 19413,
@@ -33,7 +30,6 @@ export const stock = [
         stock: 100
     },
     {
-        id: 3,
         itemName: 'Sly Shrieking Hallucination Greatsword',
         level: 1340,
         atkPower: 17574,
@@ -44,7 +40,6 @@ export const stock = [
         stock: 100
     },
     {
-        id: 4,
         itemName: 'Covetous Whisper Greatsword',
         level: 1340,
         atkPower: 17574,
@@ -55,7 +50,6 @@ export const stock = [
         stock: 100
     },
     {
-        id: 5,
         itemName: 'Harsh Oath Greatsword',
         level: 1340,
         atkPower: 17574,
@@ -66,7 +60,6 @@ export const stock = [
         stock: 100
     },
     {
-        id: 6,
         itemName: 'Epic Faded Greatsword',
         level: 2340,
         atkPower: 27574,
@@ -77,7 +70,6 @@ export const stock = [
         stock: 100
     },
     {
-        id: 7,
         itemName: 'Geneve',
         level: 1100,
         atkPower: 17958,
@@ -88,7 +80,6 @@ export const stock = [
         stock: 100
     },
     {
-        id: 8,
         itemName: 'Divided Screaming Hallucination Long Staff',
         level: 1390,
         atkPower: 19607,
@@ -99,7 +90,6 @@ export const stock = [
         stock: 100
     },
     {
-        id: 9,
         itemName: 'Whispering Hallucination Reverb Long Staff',
         level: 1390,
         atkPower: 19413,
@@ -110,7 +100,6 @@ export const stock = [
         stock: 100
     },
     {
-        id: 10,
         itemName: 'Sly Shrieking Hallucination Long Staff',
         level: 1340,
         atkPower: 17574,
@@ -121,7 +110,6 @@ export const stock = [
         stock: 100
     },
     {
-        id: 11,
         itemName: 'Covetous Whisper Long Staff',
         level: 1340,
         atkPower: 17574,
@@ -132,7 +120,6 @@ export const stock = [
         stock: 100
     },
     {
-        id: 12,
         itemName: 'Harsh Oath Long Staff',
         level: 1340,
         atkPower: 17574,
@@ -143,7 +130,6 @@ export const stock = [
         stock: 100
     },
     {
-        id: 13,
         itemName: 'Epic Faded Long Staff',
         level: 2340,
         atkPower: 27574,
