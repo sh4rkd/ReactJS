@@ -11,8 +11,8 @@ export const Cart = () => {
     if (cart.length === 0) {
         return <div className="h-screen">
             <h2 className="text-4xl text-center mt-96">Your cart is empty</h2>
-            <p  className="text-2xl text-center">Go ahead and add some cool games to it!</p>
-            <Link to="/" className="flex justify-center"><Button>Game List</Button></Link>
+            <p  className="text-2xl text-center">Go ahead and add some cool items to it!</p>
+            <Link to="/" className="flex justify-center"><Button>Item List</Button></Link>
         </div>
     }
 
@@ -49,11 +49,11 @@ export const Cart = () => {
 
                 <hr/>
                 <div className="flex flex-col items-center">
-                    <h2 className="font-semibold text-2xl">Total: ${totalCart()}</h2>
+                    <h2 className="font-semibold text-2xl">Total: ${totalCart().toFixed(2)}</h2>
 
                     <div className="w-60">
                         <button className="text-lg font-medium border-2 w-full border-white bg-yellow-300 rounded-full" onClick={emptyCart}>Empty Cart</button>
-                        <button className="text-lg font-medium border-2 w-full border-white bg-yellow-300 rounded-full">Proceed to checkout</button>
+                        <Link to="/checkout"><button className="text-lg font-medium border-2 w-full border-white bg-yellow-300 rounded-full">Proceed to checkout</button></Link>
                     </div>
                 </div>
             </div>
